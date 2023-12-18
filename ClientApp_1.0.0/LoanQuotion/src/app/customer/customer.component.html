@@ -1,0 +1,80 @@
+<div class="card">
+    <div class="card-header">
+        Personal Details
+    </div>
+    <div class="card-body">
+        <form class="row g-3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="saCitizen">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Are you a South African Citizen?
+                </label>
+            </div>
+            <div class="col-md-13">
+                <label for="validationDefault01" class="form-label">ID Number / Passport </label>
+                <input type="text" class="form-control" id="idNumber" placeholder="ID number / Passport" #idNumber value=""
+                    required >
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First name" #firstName value="" required>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="last name" #lastName value="" required>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" #dob value="" required>
+            </div>
+            <div class="col-md-3">
+                <label for="validationDefault04" class="form-label">Gender</label>
+                <select class="form-select" id="gender" #gender required>
+                    <option selected disabled value="">Please select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Non-binary</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Cell number</label>
+                <input type="tel" class="form-control" id="cellNumber" #cellNumber placeholder="cellnumber"
+                    pattern="[0-9]{3} [0-9]{3} [0-9]{4}" value="" required>
+                <small>Format: 123 453 6783</small><br><br>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Income</label>
+                <input type="number" class="form-control" id="income" #income placeholder=""
+                     value="" required>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Job</label>
+                <input type="text" class="form-control" id="job" #job  placeholder=""
+                     value="" required>
+            </div>
+            <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Employer</label>
+                <input type="text" class="form-control" id="employer" #employer job placeholder=""
+                     value="" required>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="homeOwner">
+                    <label class="form-check-label" for="homeOwner">
+                        Are you a home Owner?
+                    </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit" routerLink="/app-quotion" routerLinkActive="activebutton" 
+                (click)="addCusomter(idNumber.value , firstName.value , lastName.value , 
+                dob.value , cellNumber.value , income.value , job.value , employer.value);
+                 idNumber.value='' ">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
